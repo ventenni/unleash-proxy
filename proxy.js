@@ -12,7 +12,7 @@ const app = createApp({
 	unleashUrl: 'http://unleash-lb-391482345.us-east-2.elb.amazonaws.com/api',
 	unleashApiToken:
 		// '*:development.16d79bb7fea5b528138e682a688d996996fc443ff72b0b2c6e3b763e',
-		'*:*.136d33e6bd0a83870227470d5e5e39eba3d30c41829efb3c2bd6debc',
+		'*:development.e9d1bc856ba87529568cdcb5b8d5c2457f23beddc7cea01804e0c531',
 	clientKeys: ['proxy-1'],
 	proxyPort: 3001,
 	customStrategies: [
