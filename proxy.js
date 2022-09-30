@@ -9,7 +9,7 @@ const IsUsingMacOS = require('./CustomStrategies/IsUsingMacOS');
 const EnableAfter = require('./CustomStrategies/EnableAfter');
 
 const app = createApp({
-	unleashUrl: 'http://localhost:4242/api',
+	unleashUrl: 'http://unleash-lb-391482345.us-east-2.elb.amazonaws.com/api',
 	unleashApiToken:
 		'*:development.16d79bb7fea5b528138e682a688d996996fc443ff72b0b2c6e3b763e',
 	clientKeys: ['proxy-1'],

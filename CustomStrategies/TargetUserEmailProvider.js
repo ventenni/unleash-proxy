@@ -10,6 +10,8 @@ class TargetUserEmailProvider extends Strategy {
 		const emailArray = EmailProviders.split(',');
 		let found = false;
 
+		console.log({ parameters, context });
+
 		try {
 			emailArray.forEach((email) => {
 				if (context.properties.EmailProvider.includes(email)) {
