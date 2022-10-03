@@ -13,7 +13,7 @@ class TargetByEmailProviderStrategy extends Strategy {
 		console.log({ parameters, context });
 
 		try {
-			emailArray.forEach((email) => {
+			emailArray?.forEach((email) => {
 				if (context.properties.EmailProvider.includes(email)) {
 					found = true;
 				}
