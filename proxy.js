@@ -3,7 +3,7 @@ require('dotenv').config();
 const { createApp } = require('@unleash/proxy');
 const IsInAmerica = require('./CustomStrategies/IsInAmerica');
 const DateTimeIsBetweenRange = require('./CustomStrategies/DateTimeIsBetweenRange');
-const TargetUserEmailProvider = require('./CustomStrategies/TargetUserEmailProvider');
+const TargetByEmailProviderStrategy = require('./CustomStrategies/TargetUserEmailProvider');
 const IsUsingMacOS = require('./CustomStrategies/IsUsingMacOS');
 const EnableAfter = require('./CustomStrategies/EnableAfter');
 
@@ -20,7 +20,7 @@ const app = createApp({
 		new EnableAfter(),
 		new IsInAmerica(),
 		new IsUsingMacOS(),
-		new TargetUserEmailProvider(),
+		new TargetByEmailProviderStrategy(),
 	],
 });
 

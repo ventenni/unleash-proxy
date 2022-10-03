@@ -1,8 +1,8 @@
 const { Strategy } = require('unleash-client');
 
-class TargetUserEmailProvider extends Strategy {
+class TargetByEmailProviderStrategy extends Strategy {
 	constructor() {
-		super('TargetUserEmailProvider');
+		super('TargetByEmailProvider');
 	}
 
 	isEnabled(parameters, context) {
@@ -26,4 +26,4 @@ class TargetUserEmailProvider extends Strategy {
 	}
 }
 
-module.exports = TargetUserEmailProvider;
+module.exports = TargetByEmailProviderStrategy;
