@@ -7,7 +7,7 @@ class TargetByEmailProviderStrategy extends Strategy {
 
 	isEnabled(parameters, context) {
 		const { EmailProviders } = parameters;
-		const emailArray = EmailProviders.split(',');
+		const emailArray = EmailProviders?.split(',');
 		let found = false;
 
 		console.log({ parameters, context });
