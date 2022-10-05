@@ -15,7 +15,7 @@ class TargetByEmailProviderStrategy extends Strategy {
 		try {
 			emailArray?.forEach((email) => {
 				// Context is set on the client side
-				if (context.properties.EmailProvider.includes(email)) {
+				if (context.properties?.EmailProvider?.includes(email)) {
 					found = true;
 				}
 			});
