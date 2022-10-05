@@ -12,11 +12,6 @@ class TargetByEmailProviderStrategy extends Strategy {
 		const emailArray = EmailProviders?.split(',');
 		let found = false;
 
-		console.log({
-			emailProviderContext: context.properties?.EmailProvider,
-			params: parameters.EmailProviders,
-		});
-
 		try {
 			emailArray?.forEach((email) => {
 				// Context is set on the client side
