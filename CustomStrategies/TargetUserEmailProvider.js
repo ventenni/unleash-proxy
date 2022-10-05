@@ -6,14 +6,15 @@ class TargetByEmailProviderStrategy extends Strategy {
 	}
 
 	isEnabled(parameters, context) {
+		// Parameters are set in the Unleash server when adding the
+		// custom strategy to a toggle
 		const { EmailProviders } = parameters;
 		const emailArray = EmailProviders?.split(',');
 		let found = false;
 
-		console.log({ parameters, context });
-
 		try {
 			emailArray?.forEach((email) => {
+				// Context is set on the client side
 				if (context.properties.EmailProvider.includes(email)) {
 					found = true;
 				}
@@ -22,6 +23,7 @@ class TargetByEmailProviderStrategy extends Strategy {
 			console.log('Error: ', error);
 		}
 
+		// Return value must be a boolean
 		return found;
 	}
 }
