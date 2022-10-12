@@ -1,13 +1,13 @@
-const { Strategy } = require("unleash-client");
+const { Strategy } = require('unleash-client');
 
 class TargetByOSStrategy extends Strategy {
 	constructor() {
-		super("TargetByOS");
+		super('TargetByOS');
 	}
 
 	isEnabled(parameters, context) {
 		const { OperatingSystems } = parameters;
-		const systemsArray = OperatingSystems.split(",");
+		const systemsArray = OperatingSystems.split(',');
 
 		let isUsingOS = false;
 
@@ -18,7 +18,11 @@ class TargetByOSStrategy extends Strategy {
 
 		try {
 			systemsArray.forEach((system) => {
-				if (context?.properties?.userOS?.includes(system)) {
+				if (
+					context?.properties?.userOS
+						?.toLowerCase()
+						.includes(system.toLowerCase())
+				) {
 					isUsingOS = true;
 					return true;
 				}
