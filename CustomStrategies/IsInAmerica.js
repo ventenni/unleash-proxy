@@ -6,7 +6,7 @@ class IsInAmerica extends Strategy {
 	}
 
 	isEnabled(parameters, context) {
-		return context.properties.Region === 'America';
+		return context.properties.Region.toLowerCase() === 'america';
 	}
 }
 
