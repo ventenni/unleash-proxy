@@ -12,7 +12,7 @@ class UserRoleStrategy extends Strategy {
 		const roles = parameters.UserRole.split(',');
 
 		[...roles].forEach((item) => {
-			if (item.toLowerCase() === context.properties.UserRole.toLowerCase()) {
+			if (item.toLowerCase() === context?.properties?.UserRole?.toLowerCase()) {
 				isUserRole = true;
 			}
 		});

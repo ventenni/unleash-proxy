@@ -9,6 +9,7 @@ const TargetByEmailProviderStrategy = require('./CustomStrategies/TargetUserEmai
 const TargetByOSStrategy = require('./CustomStrategies/TargetByOS');
 const EnableAfter = require('./CustomStrategies/EnableAfter');
 const UserRoleStrategy = require('./CustomStrategies/UserRoleStrategy');
+const IsUnderAge = require('./CustomStrategies/IsUnderAge');
 
 const app = createApp({
 	unleashUrl: 'http://unleash-lb-391482345.us-east-2.elb.amazonaws.com/api',
@@ -28,6 +29,7 @@ const app = createApp({
 		new TargetByOSStrategy(),
 		new TargetByEmailProviderStrategy(),
 		new UserRoleStrategy(),
+		new IsUnderAge(),
 	],
 });
 

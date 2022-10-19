@@ -11,11 +11,6 @@ class TargetByOSStrategy extends Strategy {
 
 		let isUsingOS = false;
 
-		console.log({
-			context,
-			systemsArray,
-		});
-
 		try {
 			systemsArray.forEach((system) => {
 				if (
