@@ -7,11 +7,6 @@ class IsUnderAgeStrategy extends Strategy {
 
 	isEnabled(parameters, context) {
 		const { UserAge } = context.properties;
-		console.log({
-			parameters,
-			context,
-			isUnderAge: parseInt(UserAge) < parseInt(parameters.Age),
-		});
 
 		return parseInt(UserAge) < parseInt(parameters.Age);
 	}
