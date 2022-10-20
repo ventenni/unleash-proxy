@@ -9,8 +9,6 @@ class EnableAfter extends Strategy {
 		const current = new Date(context.properties.currentDate).getTime();
 		const enabledDate = new Date(parameters.Date).getTime();
 
-		console.log('enable after', current, enabledDate, current > enabledDate);
-
 		return current > enabledDate;
 	}
 }

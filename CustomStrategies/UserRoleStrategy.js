@@ -6,7 +6,6 @@ class UserRoleStrategy extends Strategy {
 	}
 
 	isEnabled(parameters, context) {
-		console.log({ parameters, context });
 		let isUserRole = false;
 
 		const roles = parameters.UserRole.split(',');
